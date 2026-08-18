@@ -24,7 +24,7 @@ namespace Locks2.Core
 
         public override IEnumerable<Gizmo> CompGetGizmosExtra()
         {
-            if (config.door != parent)
+            if (config == null || config.door != parent)
             {
                 config = new LockConfig { door = parent };
                 config.Initailize();
